@@ -1,1 +1,11 @@
-/* css */
+.container {
+grid-template-areas:
+"header header header header header"
+"nav-bar nav-bar nav-bar nav-bar nav-bar"
+"menu-section menu-section article article article"
+"menu-section menu-section article article article"
+"footer footer footer footer footer";
+border: 1px solid black;
+height: 100vh;
+width: 100vw;
+}
