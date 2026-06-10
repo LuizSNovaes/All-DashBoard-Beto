@@ -153,7 +153,7 @@ padding-right: 20px;
 .article {
     grid-area: article;
     background-color: var(--barca-blue);
-     border: 1px solid var(--barca-gold);
+    border: 1px solid var(--barca-gold);
     
 }
 
