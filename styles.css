@@ -1,11 +1,146 @@
+:root {
+  /* Azul e Grená (cores principais) */
+    --barca-blue: #004D98;
+    --barca-garnet: #A50044;
+
+  /* Variações */
+    --barca-blue-dark: #003B75;
+    --barca-garnet-dark: #7A0032;
+
+  /* Cores de apoio */
+    --barca-gold: #EDBB00;
+    --barca-yellow: #FFCC00;
+
+  /* Neutras */
+    --barca-white: #FFFFFF;
+    --barca-black: #111111;
+    --barca-gray: #F5F5F5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
+display: grid;
 grid-template-areas:
-"header header header header header"
-"nav-bar nav-bar nav-bar nav-bar nav-bar"
-"menu-section menu-section article article article"
-"menu-section menu-section article article article"
+"menu-section header header header header"
+"menu-section article article article article"
+"menu-section article article article article"
+"menu-section article article article article"
 "footer footer footer footer footer";
-border: 1px solid black;
 height: 100vh;
 width: 100vw;
+}
+
+.header {
+    grid-area: header;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-search {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: var(--barca-blue);
+    color: var(--barca-gold);
+}
+
+.header .header-search span {
+    font-size: 25px;
+}
+
+.header .header-search input {
+    background-color: var(--barca-blue-dark);
+    border: var(--barca-gold) 1px solid;
+    outline: none;
+    color: var(--barca-gold);
+    margin-left: 20px;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px;
+    height: 20%;
+}
+
+.header .header-icons-input {
+background-color: var(--barca-garnet);
+height: 100%;
+width: 60%;
+display: flex;
+align-items: center;
+justify-content: end;
+gap: 20px;
+padding-right: 20px;
+}
+
+.header .header-icons-input .header-icons {
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--barca-gold);
+    border:1px solid var(--barca-gold);
+    border-radius: 10px;
+}
+
+    .header .header-icons-input .header-input{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+    color: var(--barca-gold);
+    align-items: center;  
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 10px;
+    border:1px solid var(--barca-gold);
+    }
+
+    .header .header-icons-input .header-input img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    }
+
+.menu-section {
+    grid-area: menu-section;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-section .menu-section-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--barca-garnet);
+    width: 100%;
+    height: 252px;
+}
+
+.menu-section .menu-section-top img{
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid var(--barca-gold);
+    border-radius: 10px;
+    background-color: var(--barca-garnet-dark);
+}
+
+.article {
+    grid-area: article;
+    border: 1px solid black;
+}
+
+.footer {
+    grid-area: footer;
+    border: 1px solid black;
 }
