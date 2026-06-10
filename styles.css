@@ -118,6 +118,7 @@ padding-right: 20px;
     grid-area: menu-section;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--barca-gold);
 }
 
 .menu-section .menu-section-top {
